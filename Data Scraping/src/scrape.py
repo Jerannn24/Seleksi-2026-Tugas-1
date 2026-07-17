@@ -50,8 +50,8 @@ for start in range (0, 200, 50):
     for game in games:
         title = game.find('span', class_='title').text
         print(f"Sedang di proses... {title}")
-        app_id = game.get("data-ds-appid")
-        newUrl = f"https://store.steampowered.com/app/{app_id}"
+        game_id = game.get("data-ds-appid")
+        newUrl = f"https://store.steampowered.com/app/{game_id}"
         
         # Mengambil data detail game dari halaman detail game
         try:
@@ -83,7 +83,7 @@ for start in range (0, 200, 50):
         
         # Menambahkan genre ke dalam game_genres
         game_genres.append({
-            "app_id": app_id,
+            "game_id": game_id,
             "genres": temp_genres
         })
         
@@ -99,7 +99,7 @@ for start in range (0, 200, 50):
           
         # Delay untuk menghindari terlalu banyak request dalam waktu singkat
         game_tags.append({
-            "app_id": app_id,
+            "game_id": game_id,
             "tags": temp_tags
         })
         
@@ -114,7 +114,7 @@ for start in range (0, 200, 50):
         developers.add(dev)
         
         game_developers.append({
-            "app_id": app_id,
+            "game_id": game_id,
             "developer": dev
         })
         
@@ -125,12 +125,12 @@ for start in range (0, 200, 50):
         publishers.add(pub)
         
         game_publishers.append({
-            "app_id": app_id,
+            "game_id": game_id,
             "publisher": pub
         })
         
         data_games.append({
-            "app_id": app_id,
+            "game_id": game_id,
             "title": title,
             "price": price,
             "release_date": release_date,
@@ -167,7 +167,7 @@ for game_genre in game_genres:
         genre_id = next((g["genre_id"] for g in genre_json if g["name"] == genre), None)
         if genre_id is not None:
             game_genres_json.append({
-                "app_id": game_genre["app_id"],
+                "game_id": game_genre["game_id"],
                 "genre_id": genre_id
             })
 
@@ -185,7 +185,7 @@ for tag_id, tag_name in enumerate(sorted(tags), start=1):
 with open('data/tags.json', 'w', encoding='utf-8') as f:
     json.dump(list(tags_list), f, ensure_ascii=False, indent=4)
     
-# mengubah game_tags menjadi list of dictionary dengan app_id dan tag_id
+# mengubah game_tags menjadi list of dictionary dengan game_id dan tag_id
 game_tags_json = []
 
 for game_tag in game_tags:
@@ -194,7 +194,7 @@ for game_tag in game_tags:
         tag_id = next((t["tag_id"] for t in tags_list if t["name"] == tag), None)
         if tag_id is not None:
             game_tags_json.append({
-                "app_id": game_tag["app_id"],
+                "game_id": game_tag["game_id"],
                 "tag_id": tag_id
             })
 
@@ -213,14 +213,14 @@ for dev_id, dev_name in enumerate(sorted(developers), start=1):
 with open('data/developers.json', 'w', encoding='utf-8') as f:
     json.dump(dev_json, f, ensure_ascii=False, indent=4)
 
-# Menyimpan data id developer dan app_id ke list of dictionary dengan app_id dan dev_id
+# Menyimpan data id developer dan game_id ke list of dictionary dengan game_id dan dev_id
 game_dev_dict = []
 for game_dev in game_developers:
     # Mencari dev_id dari dev_json
     dev_id = next((d["dev_id"] for d in dev_json if d["name"] == game_dev["developer"]), None)
     if dev_id is not None:
         game_dev_dict.append({
-            "app_id": game_dev["app_id"],
+            "game_id": game_dev["game_id"],
             "dev_id": dev_id
         })
 
@@ -235,26 +235,26 @@ for pub_id, pub_name in enumerate(sorted(publishers), start=1):
 with open('data/publishers.json', 'w', encoding='utf-8') as f:
     json.dump(pub_json, f, ensure_ascii=False, indent=4)
 
-# Menyimpan data id publisher dan app_id ke list of dictionary dengan app_id dan pub_id
+# Menyimpan data id publisher dan game_id ke list of dictionary dengan game_id dan pub_id
 game_pub_dict = []
 for game_pub in game_publishers:
     # Mencari pub_id dari pub_json
     pub_id = next((p["pub_id"] for p in pub_json if p["name"] == game_pub["publisher"]), None)
     if pub_id is not None:
         game_pub_dict.append({
-            "app_id": game_pub["app_id"],
+            "game_id": game_pub["game_id"],
             "pub_id": pub_id
         })
         
 # Menambah ID dev dan ID pub ke dalam data_games
 for game in data_games:
     # Mencari dev_id dari game_dev_dict
-    dev_id = next((gd["dev_id"] for gd in game_dev_dict if gd["app_id"] == game["app_id"]), None)
+    dev_id = next((gd["dev_id"] for gd in game_dev_dict if gd["game_id"] == game["game_id"]), None)
     if dev_id is not None:
         game["dev_id"] = dev_id
     
     # Mencari pub_id dari game_pub_dict
-    pub_id = next((gp["pub_id"] for gp in game_pub_dict if gp["app_id"] == game["app_id"]), None)
+    pub_id = next((gp["pub_id"] for gp in game_pub_dict if gp["game_id"] == game["game_id"]), None)
     if pub_id is not None:
         game["pub_id"] = pub_id
 
