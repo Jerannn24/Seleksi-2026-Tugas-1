@@ -81,31 +81,31 @@
     },
     {
         "pub_id": 21,
-        "name": "Com2uS"
-    },
-    {
-        "pub_id": 22,
         "name": "ConcernedApe"
     },
     {
-        "pub_id": 23,
-        "name": "Crate Entertainment"
-    },
-    {
-        "pub_id": 24,
+        "pub_id": 22,
         "name": "Crytek"
     },
     {
-        "pub_id": 25,
+        "pub_id": 23,
         "name": "Deep Silver"
     },
     {
-        "pub_id": 26,
+        "pub_id": 24,
         "name": "Digital Extremes"
     },
     {
-        "pub_id": 27,
+        "pub_id": 25,
+        "name": "Eagle Dynamics SA"
+    },
+    {
+        "pub_id": 26,
         "name": "Electronic Arts"
+    },
+    {
+        "pub_id": 27,
+        "name": "Evil Landfall?"
     },
     {
         "pub_id": 28,
@@ -137,39 +137,39 @@
     },
     {
         "pub_id": 35,
-        "name": "GIANTS Software"
+        "name": "FuturLab"
     },
     {
         "pub_id": 36,
-        "name": "Gaijin Network Ltd"
+        "name": "GIANTS Software"
     },
     {
         "pub_id": 37,
-        "name": "Gameloft"
+        "name": "Gaijin Network Ltd"
     },
     {
         "pub_id": 38,
-        "name": "Gamersky Games"
+        "name": "Gameloft"
     },
     {
         "pub_id": 39,
-        "name": "Gearbox Publishing"
+        "name": "Gamersky Games"
     },
     {
         "pub_id": 40,
-        "name": "Hello Games"
+        "name": "Gearbox Publishing"
     },
     {
         "pub_id": 41,
-        "name": "Hooded Horse"
+        "name": "Hello Games"
     },
     {
         "pub_id": 42,
-        "name": "IO Interactive A/S"
+        "name": "Hooded Horse"
     },
     {
         "pub_id": 43,
-        "name": "Innersloth"
+        "name": "IO Interactive A/S"
     },
     {
         "pub_id": 44,
@@ -197,174 +197,166 @@
     },
     {
         "pub_id": 50,
-        "name": "LEVEL5 Inc."
-    },
-    {
-        "pub_id": 51,
         "name": "Larian Studios"
     },
     {
-        "pub_id": 52,
+        "pub_id": 51,
         "name": "Ludeon Studios"
     },
     {
-        "pub_id": 53,
+        "pub_id": 52,
         "name": "MINTROCKET"
     },
     {
-        "pub_id": 54,
+        "pub_id": 53,
         "name": "Mega Crit"
     },
     {
-        "pub_id": 55,
-        "name": "Moon Studios GmbH"
-    },
-    {
-        "pub_id": 56,
+        "pub_id": 54,
         "name": "NEXON"
     },
     {
-        "pub_id": 57,
+        "pub_id": 55,
         "name": "Nacon"
     },
     {
-        "pub_id": 58,
+        "pub_id": 56,
         "name": "New One Studio"
     },
     {
-        "pub_id": 59,
+        "pub_id": 57,
         "name": "Newnight"
     },
     {
-        "pub_id": 60,
+        "pub_id": 58,
         "name": "Nicalis, Inc."
     },
     {
-        "pub_id": 61,
+        "pub_id": 59,
         "name": "Paradox Interactive"
     },
     {
-        "pub_id": 62,
+        "pub_id": 60,
         "name": "Pearl Abyss"
     },
     {
-        "pub_id": 63,
+        "pub_id": 61,
         "name": "PlayStation Publishing LLC"
     },
     {
-        "pub_id": 64,
+        "pub_id": 62,
+        "name": "PlayWay S.A."
+    },
+    {
+        "pub_id": 63,
         "name": "Pocketpair"
     },
     {
-        "pub_id": 65,
+        "pub_id": 64,
         "name": "Pocketpair Publishing (Japan)"
     },
     {
-        "pub_id": 66,
+        "pub_id": 65,
         "name": "Re-Logic"
     },
     {
-        "pub_id": 67,
+        "pub_id": 66,
         "name": "Red Barrels"
     },
     {
-        "pub_id": 68,
+        "pub_id": 67,
         "name": "Rockstar Games"
     },
     {
-        "pub_id": 69,
+        "pub_id": 68,
         "name": "SCS Software"
     },
     {
-        "pub_id": 70,
+        "pub_id": 69,
         "name": "SEGA"
     },
     {
-        "pub_id": 71,
+        "pub_id": 70,
         "name": "Secret Mode"
     },
     {
-        "pub_id": 72,
-        "name": "Shiro Games"
-    },
-    {
-        "pub_id": 73,
+        "pub_id": 71,
         "name": "Studio Wildcard"
     },
     {
-        "pub_id": 74,
+        "pub_id": 72,
         "name": "TENSTACK"
     },
     {
-        "pub_id": 75,
+        "pub_id": 73,
         "name": "THQ Nordic"
     },
     {
-        "pub_id": 76,
+        "pub_id": 74,
         "name": "TaleWorlds Entertainment"
     },
     {
-        "pub_id": 77,
+        "pub_id": 75,
         "name": "The Fun Pimps Entertainment LLC"
     },
     {
-        "pub_id": 78,
+        "pub_id": 76,
         "name": "Ubisoft"
     },
     {
-        "pub_id": 79,
+        "pub_id": 77,
         "name": "Unknown"
     },
     {
-        "pub_id": 80,
+        "pub_id": 78,
         "name": "Unknown Worlds Entertainment"
     },
     {
-        "pub_id": 81,
+        "pub_id": 79,
         "name": "VRChat Inc."
     },
     {
-        "pub_id": 82,
+        "pub_id": 80,
         "name": "Valve"
     },
     {
-        "pub_id": 83,
+        "pub_id": 81,
         "name": "Wargaming Group Limited"
     },
     {
-        "pub_id": 84,
+        "pub_id": 82,
         "name": "Warner Bros. Games"
     },
     {
-        "pub_id": 85,
+        "pub_id": 83,
         "name": "XD"
     },
     {
-        "pub_id": 86,
+        "pub_id": 84,
         "name": "XSEED Games"
     },
     {
-        "pub_id": 87,
+        "pub_id": 85,
         "name": "Xbox Game Studios"
     },
     {
-        "pub_id": 88,
+        "pub_id": 86,
         "name": "indie.io"
     },
     {
-        "pub_id": 89,
+        "pub_id": 87,
         "name": "lemorion_1224"
     },
     {
-        "pub_id": 90,
+        "pub_id": 88,
         "name": "rokaplay"
     },
     {
-        "pub_id": 91,
+        "pub_id": 89,
         "name": "tinyBuild"
     },
     {
-        "pub_id": 92,
+        "pub_id": 90,
         "name": "tobyfox"
     }
 ]
