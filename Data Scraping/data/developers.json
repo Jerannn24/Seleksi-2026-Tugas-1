@@ -1,0 +1,414 @@
+[
+    {
+        "dev_id": 1,
+        "name": "11 bit studios"
+    },
+    {
+        "dev_id": 2,
+        "name": "ACE Team"
+    },
+    {
+        "dev_id": 3,
+        "name": "ATLUS"
+    },
+    {
+        "dev_id": 4,
+        "name": "AdHoc Studio"
+    },
+    {
+        "dev_id": 5,
+        "name": "ArenaNet®"
+    },
+    {
+        "dev_id": 6,
+        "name": "Arrowhead Game Studios"
+    },
+    {
+        "dev_id": 7,
+        "name": "Asobo Studio"
+    },
+    {
+        "dev_id": 8,
+        "name": "Aspyr (Mac)"
+    },
+    {
+        "dev_id": 9,
+        "name": "Battlefield Studios"
+    },
+    {
+        "dev_id": 10,
+        "name": "BeamNG"
+    },
+    {
+        "dev_id": 11,
+        "name": "Behaviour Interactive Inc."
+    },
+    {
+        "dev_id": 12,
+        "name": "Bethesda Game Studios"
+    },
+    {
+        "dev_id": 13,
+        "name": "Blackbird Interactive"
+    },
+    {
+        "dev_id": 14,
+        "name": "Blizzard Entertainment, Inc."
+    },
+    {
+        "dev_id": 15,
+        "name": "Bloober Team SA"
+    },
+    {
+        "dev_id": 16,
+        "name": "Bohemia Interactive"
+    },
+    {
+        "dev_id": 17,
+        "name": "Bungie"
+    },
+    {
+        "dev_id": 18,
+        "name": "CAPCOM Co., Ltd."
+    },
+    {
+        "dev_id": 19,
+        "name": "CD PROJEKT RED"
+    },
+    {
+        "dev_id": 20,
+        "name": "CREATIVE ASSEMBLY"
+    },
+    {
+        "dev_id": 21,
+        "name": "Codemasters"
+    },
+    {
+        "dev_id": 22,
+        "name": "Coffee Stain Studios"
+    },
+    {
+        "dev_id": 23,
+        "name": "Com2uS"
+    },
+    {
+        "dev_id": 24,
+        "name": "ConcernedApe"
+    },
+    {
+        "dev_id": 25,
+        "name": "Crate Entertainment"
+    },
+    {
+        "dev_id": 26,
+        "name": "Crytek"
+    },
+    {
+        "dev_id": 27,
+        "name": "Digital Extremes"
+    },
+    {
+        "dev_id": 28,
+        "name": "EA Canada"
+    },
+    {
+        "dev_id": 29,
+        "name": "Electronic Arts"
+    },
+    {
+        "dev_id": 30,
+        "name": "Endnight Games Ltd"
+    },
+    {
+        "dev_id": 31,
+        "name": "Expansive Worlds"
+    },
+    {
+        "dev_id": 32,
+        "name": "Facepunch Studios"
+    },
+    {
+        "dev_id": 33,
+        "name": "Fatshark"
+    },
+    {
+        "dev_id": 34,
+        "name": "Firaxis Games"
+    },
+    {
+        "dev_id": 35,
+        "name": "Frontier Developments"
+    },
+    {
+        "dev_id": 36,
+        "name": "Frozen District"
+    },
+    {
+        "dev_id": 37,
+        "name": "Funcom"
+    },
+    {
+        "dev_id": 38,
+        "name": "GIANTS Software"
+    },
+    {
+        "dev_id": 39,
+        "name": "GSC Game World"
+    },
+    {
+        "dev_id": 40,
+        "name": "Gameloft"
+    },
+    {
+        "dev_id": 41,
+        "name": "Gearbox Software"
+    },
+    {
+        "dev_id": 42,
+        "name": "Halo Studios"
+    },
+    {
+        "dev_id": 43,
+        "name": "Hazelight Studios"
+    },
+    {
+        "dev_id": 44,
+        "name": "Hello Games"
+    },
+    {
+        "dev_id": 45,
+        "name": "IO Interactive A/S"
+    },
+    {
+        "dev_id": 46,
+        "name": "Iceflake Studios"
+    },
+    {
+        "dev_id": 47,
+        "name": "Innersloth"
+    },
+    {
+        "dev_id": 48,
+        "name": "Jagex Ltd"
+    },
+    {
+        "dev_id": 49,
+        "name": "KOJIMA PRODUCTIONS"
+    },
+    {
+        "dev_id": 50,
+        "name": "KONAMI"
+    },
+    {
+        "dev_id": 51,
+        "name": "Kinetic Games"
+    },
+    {
+        "dev_id": 52,
+        "name": "Klei Entertainment"
+    },
+    {
+        "dev_id": 53,
+        "name": "LEVEL5 Inc."
+    },
+    {
+        "dev_id": 54,
+        "name": "Larian Studios"
+    },
+    {
+        "dev_id": 55,
+        "name": "Ludeon Studios"
+    },
+    {
+        "dev_id": 56,
+        "name": "MINTROCKET"
+    },
+    {
+        "dev_id": 57,
+        "name": "Maxis"
+    },
+    {
+        "dev_id": 58,
+        "name": "Mega Cat Studios"
+    },
+    {
+        "dev_id": 59,
+        "name": "Mega Crit"
+    },
+    {
+        "dev_id": 60,
+        "name": "Moon Studios GmbH"
+    },
+    {
+        "dev_id": 61,
+        "name": "NEXON Games Co., Ltd."
+    },
+    {
+        "dev_id": 62,
+        "name": "New One Studio"
+    },
+    {
+        "dev_id": 63,
+        "name": "Nicalis, Inc."
+    },
+    {
+        "dev_id": 64,
+        "name": "Nixxes Software"
+    },
+    {
+        "dev_id": 65,
+        "name": "PUBG Corporation"
+    },
+    {
+        "dev_id": 66,
+        "name": "Paradox Development Studio"
+    },
+    {
+        "dev_id": 67,
+        "name": "Pearl Abyss"
+    },
+    {
+        "dev_id": 68,
+        "name": "Playground Games"
+    },
+    {
+        "dev_id": 69,
+        "name": "Pocketpair"
+    },
+    {
+        "dev_id": 70,
+        "name": "Rare Ltd"
+    },
+    {
+        "dev_id": 71,
+        "name": "Re-Logic"
+    },
+    {
+        "dev_id": 72,
+        "name": "Red Barrels"
+    },
+    {
+        "dev_id": 73,
+        "name": "Respawn"
+    },
+    {
+        "dev_id": 74,
+        "name": "Rockstar Games"
+    },
+    {
+        "dev_id": 75,
+        "name": "Rockstar North"
+    },
+    {
+        "dev_id": 76,
+        "name": "SCS Software"
+    },
+    {
+        "dev_id": 77,
+        "name": "Saber Interactive"
+    },
+    {
+        "dev_id": 78,
+        "name": "Shiro Games"
+    },
+    {
+        "dev_id": 79,
+        "name": "Slavic Magic"
+    },
+    {
+        "dev_id": 80,
+        "name": "Studio Wildcard"
+    },
+    {
+        "dev_id": 81,
+        "name": "TEAM GWYF"
+    },
+    {
+        "dev_id": 82,
+        "name": "THIS GAME IS PART OF A SALE EVENT"
+    },
+    {
+        "dev_id": 83,
+        "name": "TT Games"
+    },
+    {
+        "dev_id": 84,
+        "name": "TaleWorlds Entertainment"
+    },
+    {
+        "dev_id": 85,
+        "name": "The Fun Pimps"
+    },
+    {
+        "dev_id": 86,
+        "name": "Tiburon"
+    },
+    {
+        "dev_id": 87,
+        "name": "Ubisoft"
+    },
+    {
+        "dev_id": 88,
+        "name": "Ubisoft Bordeaux"
+    },
+    {
+        "dev_id": 89,
+        "name": "Ubisoft Montreal"
+    },
+    {
+        "dev_id": 90,
+        "name": "Undercoders"
+    },
+    {
+        "dev_id": 91,
+        "name": "Unfrozen"
+    },
+    {
+        "dev_id": 92,
+        "name": "Unknown"
+    },
+    {
+        "dev_id": 93,
+        "name": "Unknown Worlds Entertainment"
+    },
+    {
+        "dev_id": 94,
+        "name": "VRChat Inc."
+    },
+    {
+        "dev_id": 95,
+        "name": "Valve"
+    },
+    {
+        "dev_id": 96,
+        "name": "Visual Concepts"
+    },
+    {
+        "dev_id": 97,
+        "name": "Wargaming Group Limited"
+    },
+    {
+        "dev_id": 98,
+        "name": "Warhorse Studios"
+    },
+    {
+        "dev_id": 99,
+        "name": "World's Edge"
+    },
+    {
+        "dev_id": 100,
+        "name": "XD"
+    },
+    {
+        "dev_id": 101,
+        "name": "ZeniMax Online Studios"
+    },
+    {
+        "dev_id": 102,
+        "name": "lemorion_1224"
+    },
+    {
+        "dev_id": 103,
+        "name": "tobyfox"
+    }
+]
