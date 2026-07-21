@@ -1,13 +1,18 @@
 import mysql.connector
 from mysql.connector import Error
 
-
+# Function untuk membuat database dan tabel-tabel yang diperlukan
 def create_database(cursor):
+    # Drop database jika sudah ada dan buat database baru
     cursor.execute("DROP DATABASE IF EXISTS SteamGames") 
     cursor.execute("CREATE DATABASE IF NOT EXISTS SteamGames")
 
+    # Gunakan database yang telah dibuat
     cursor.execute("USE SteamGames")
 
+    # Buat tabel-tabel yang diperlukan
+    
+    # Tabel untuk menyimpan data developer
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Developers (
         dev_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -15,6 +20,7 @@ def create_database(cursor):
     )
     """)
 
+    # Tabel untuk menyimpan data publisher
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Publishers (
         pub_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,6 +28,7 @@ def create_database(cursor):
     )
     """)
     
+    # Tabel untuk menyimpan data game 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Games (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,6 +46,7 @@ def create_database(cursor):
     )
     """)
 
+    # Tabel untuk menyimpan data genre dan relasinya dengan game
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Genres (
         genre_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -46,6 +54,7 @@ def create_database(cursor):
     )
     """)
 
+    # Tabel untuk menyimpan relasi antara game dan genre
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS GameGenres (
         game_id INT NOT NULL,
@@ -57,6 +66,7 @@ def create_database(cursor):
     )
     """)
 
+    # Tabel untuk menyimpan data tag dan relasinya dengan game
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Tags(
         tag_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,6 +74,7 @@ def create_database(cursor):
     )
     """)
 
+    # Tabel untuk menyimpan relasi antara game dan tag
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS GameTags (
         game_id INT NOT NULL,
@@ -76,6 +87,7 @@ def create_database(cursor):
 
     # Tambahan tabel yang tidak menyimpan data, hanya untuk relasi
 
+    # Tabel untuk menyimpan data achievement dan relasinya dengan game
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Achievements (
         achievement_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -87,7 +99,7 @@ def create_database(cursor):
     )"""
     )
 
-
+    # Tabel untuk menyimpan data user dan relasinya dengan game
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -103,6 +115,7 @@ def create_database(cursor):
     )"""
     )
 
+    # Tabel untuk menyimpan data wallet user
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Wallet (
         user_id INT NOT NULL PRIMARY KEY,
@@ -111,6 +124,7 @@ def create_database(cursor):
     )"""
     )
 
+    # Tabel untuk menyimpan data library user
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Library (
         game_id INT NOT NULL,
@@ -126,6 +140,7 @@ def create_database(cursor):
     )"""
     )
 
+    # Tabel untuk menyimpan data transaksi user
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Transactions (
         transaction_id INT AUTO_INCREMENT PRIMARY KEY,
