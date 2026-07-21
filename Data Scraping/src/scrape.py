@@ -1,5 +1,6 @@
 # Import library yang dibutuhkan
 import json
+import re
 import requests
 import time
 from bs4 import BeautifulSoup
@@ -17,7 +18,7 @@ cookies = {
 }
 # List untuk menyimpan data game
 data_games = []
-
+games_id = set()
 # List untuk menyimpan data developer 
 developers = set()
 game_developers = []
@@ -51,6 +52,12 @@ for start in range (0, 200, 50):
         title = game.find('span', class_='title').text
         print(f"Sedang di proses... {title}")
         game_id = game.get("data-ds-appid")
+        # Skip game jika sudah pernah di-scrape
+        if game_id in games_id:
+            continue
+        
+        games_id.add(game_id)
+        
         newUrl = f"https://store.steampowered.com/app/{game_id}"
         
         # Mengambil data detail game dari halaman detail game
@@ -64,16 +71,31 @@ for start in range (0, 200, 50):
 
         # Mengambil data game seperti harga, release date, review summary, review count, image url, game_url, description
         price_tag = soup2.find("div", class_="game_purchase_price")
-        price = price_tag.text.strip() if price_tag else "Free"
-        
+        price = price_tag.text.strip() if price_tag else "Free To Play"
+        if 'Rp' in price:
+            price = float(re.sub(r'[^\d.]', '', price))
+        else:
+            price = 0.00
         release_date_tag = soup2.find("div", class_="date")
-        release_date = format_date(release_date_tag.text.strip()) if release_date_tag else "Unknown"
+        release_date = format_date(release_date_tag.text.strip()) if release_date_tag else None
         
+        review_tag = soup2.find("span", class_="responsive_reviewdesc_short")
+        
+        if review_tag:
+            text = review_tag.get_text(" ", strip=True)
+
+            match = re.search(r'of\s+([\d,]+)', text)
+
+            if match:
+                review_count = int(match.group(1).replace(",", ""))
+            else:
+                review_count = 0
+        else:
+            review_count = 0
+
         review_summary_tag = soup2.find("span", class_="game_review_summary")
-        review_summary = review_summary_tag.text.strip() if review_summary_tag else "Unknown"
+        review_summary = review_summary_tag.text.strip() if review_summary_tag else None
         
-        review_count_tag = soup2.find("div", class_="user_reviews_summary_row")
-        review_count = review_count_tag.find("span", class_="responsive_hidden").text.strip() if review_count_tag else "Unknown"
         
         # Mengambil genre dari halaman detail game dan membatasi hanya 5 genre
         temp_genres = [
@@ -107,7 +129,7 @@ for start in range (0, 200, 50):
         for tag in temp_tags:
             tags.add(tag)
             
-        # Mengambil developer dari halaman detail game, jika tidak ditemukan maka akan diisi dengan "Unknown"
+        # Mengambil developer dari halaman detail game, jika tidak ditemukan maka akan diisi dengan None
         dev_tag = soup2.find("a", href=lambda href: href and "/developer/" in href)
         dev = dev_tag.text.strip() if dev_tag else "Unknown"
         
@@ -118,7 +140,7 @@ for start in range (0, 200, 50):
             "developer": dev
         })
         
-        # Mengambil publisher dari halaman detail game, jika tidak ditemukan maka akan diisi dengan "Unknown"
+        # Mengambil publisher dari halaman detail game, jika tidak ditemukan maka akan diisi dengan None
         pub_tag = soup2.find("a", href=lambda href: href and "/publisher/" in href)
         pub = pub_tag.text.strip() if pub_tag else "Unknown"
 
@@ -140,7 +162,7 @@ for start in range (0, 200, 50):
         })
         
         time.sleep(0.5)
-    #     break
+        # break
     # break
 
 # Menyimpan data ke dalam file JSON
@@ -240,6 +262,7 @@ game_pub_dict = []
 for game_pub in game_publishers:
     # Mencari pub_id dari pub_json
     pub_id = next((p["pub_id"] for p in pub_json if p["name"] == game_pub["publisher"]), None)
+
     if pub_id is not None:
         game_pub_dict.append({
             "game_id": game_pub["game_id"],
