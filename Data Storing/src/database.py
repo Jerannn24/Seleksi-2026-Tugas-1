@@ -1,10 +1,6 @@
-import mysql.connector
-from mysql.connector import Error
-
 # Function untuk membuat database dan tabel-tabel yang diperlukan
 def create_database(cursor):
     # Drop database jika sudah ada dan buat database baru
-    cursor.execute("DROP DATABASE IF EXISTS SteamGames") 
     cursor.execute("CREATE DATABASE IF NOT EXISTS SteamGames")
 
     # Gunakan database yang telah dibuat
